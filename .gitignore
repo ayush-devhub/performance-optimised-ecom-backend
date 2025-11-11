@@ -1,0 +1,73 @@
+# =====================================
+# 🌱 SPRING BOOT / MAVEN PROJECT
+# =====================================
+
+# 🧩 Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+**/dependency-reduced-pom.xml
+
+# 🪶 IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+# 🧱 VS Code
+.vscode/
+
+# ☕ Java build artifacts
+*.class
+*.log
+*.jar
+*.war
+*.ear
+
+# 🧪 Test and temp files
+*.tmp
+*.bak
+*.swp
+*.swo
+*.orig
+*.rej
+
+# 🗄️ OS-specific stuff
+.DS_Store
+Thumbs.db
+
+# 📦 Dependency caches
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# 🔐 Environment / config files (optional)
+application-*.yml
+application-*.yaml
+application-*.properties
+.env
+
+# 🧬 Database schema or migrations (optional)
+# Uncomment if you don't want to track generated schema.sql
+# schema.sql
+
+# 🧑‍💻 Logs
+logs/
+*.log
+*.out
+
+# 🧰 Tools / Scripts (optional)
+# Exclude local dev scripts or tools
+scripts/*.sh
+*.bat
+
+# 🚀 Webapp specific (if using JSP or static frontend)
+*.jsp~
+webapp/WEB-INF/classes/
+webapp/WEB-INF/lib/
+webapp/WEB-INF/*.bak
+webapp/**/.DS_Store
+
+# 🧩 Node / frontend (if applicable later)
+node_modules/
+dist/
