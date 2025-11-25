@@ -2,6 +2,7 @@ package com.ecom.performance_ecom.controller;
 
 
 import com.ecom.performance_ecom.model.Product;
+import com.ecom.performance_ecom.repository.projections.ProductProjection;
 import com.ecom.performance_ecom.service.ProductService;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,8 +25,8 @@ public class ProductController {
     }
 
     @GetMapping
-    public List<Product> getAllProducts(){
-        return productService.getAllProducts();
+    public List<ProductProjection> getAllProducts(){
+        return productService.getAllProductsOptimized();
     }
 
     @GetMapping("/{id}")
