@@ -3,9 +3,12 @@ package com.ecom.performance_ecom.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.BatchSize;
 
 @Entity
 @Table(name = "order_items")
+@BatchSize(size = 30)
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

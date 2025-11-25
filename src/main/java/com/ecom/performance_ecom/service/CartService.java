@@ -9,7 +9,6 @@ import com.ecom.performance_ecom.repository.CartRepository;
 import com.ecom.performance_ecom.repository.ProductRepository;
 import com.ecom.performance_ecom.repository.UserRepository;
 import org.springframework.stereotype.Service;
-import java.util.List;
 
 @Service
 public class CartService {
@@ -28,9 +27,7 @@ public class CartService {
     }
 
     public Cart getOrCreateCart(Long userId) {
-//        User user = userRepo.findById(userId).orElseThrow();
-//        return cartRepo.findByUser(user)
-//                .orElseGet(() -> cartRepo.save(Cart.builder().user(user).build()));
+
 
         User user = userRepo.findById(userId).orElseThrow();
 
@@ -53,7 +50,7 @@ public class CartService {
         return cartRepo.findById(cart.getId()).orElseThrow();
     }
 
-    public Cart viewCart(Long userId) {
+    public Cart getCart(Long userId) {
         return getOrCreateCart(userId);
     }
 

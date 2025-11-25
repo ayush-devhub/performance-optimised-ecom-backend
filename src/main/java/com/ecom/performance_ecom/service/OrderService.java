@@ -68,6 +68,7 @@ public class OrderService {
         // 7. Save the Order. CascadeType.ALL will now save the OrderItems,
         // which all have a valid (non-null) order.
         Order saved = orderRepo.save(order);
+        orderRepo.flush();
 
         // 9. Clear the cart
         cartItemRepo.deleteAll(cart.getItems());

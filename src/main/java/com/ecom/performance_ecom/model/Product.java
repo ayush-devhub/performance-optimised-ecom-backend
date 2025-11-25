@@ -6,10 +6,12 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.BatchSize;
 
 @Entity
 @Table(name = "products")
 @Data
+@BatchSize(size = 30)
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
