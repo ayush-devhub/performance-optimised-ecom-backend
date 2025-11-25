@@ -28,8 +28,14 @@ public class CartService {
     }
 
     public Cart getOrCreateCart(Long userId) {
+//        User user = userRepo.findById(userId).orElseThrow();
+//        return cartRepo.findByUser(user)
+//                .orElseGet(() -> cartRepo.save(Cart.builder().user(user).build()));
+
         User user = userRepo.findById(userId).orElseThrow();
-        return cartRepo.findByUser(user)
+
+        // USE YOUR NEW METHOD HERE:
+        return cartRepo.findByUserWithItemsAndProducts(user)
                 .orElseGet(() -> cartRepo.save(Cart.builder().user(user).build()));
     }
 

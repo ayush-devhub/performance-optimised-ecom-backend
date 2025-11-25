@@ -18,14 +18,14 @@ public class ProductController {
         this.productService = productService;
     }
 
-    @GetMapping
-    public List<Product> getAllProducts(){
-        return productService.getAllProducts();
-    }
-
     @PostMapping
     public Product addProduct(@RequestBody Product product){
         return productService.addProduct(product);
+    }
+
+    @GetMapping
+    public List<Product> getAllProducts(){
+        return productService.getAllProducts();
     }
 
     @GetMapping("/{id}")
