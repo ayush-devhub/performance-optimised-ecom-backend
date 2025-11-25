@@ -3,6 +3,7 @@ package com.ecom.performance_ecom.service;
 import com.ecom.performance_ecom.model.Product;
 import com.ecom.performance_ecom.repository.ProductRepository;
 import com.ecom.performance_ecom.repository.projections.ProductProjection;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -21,6 +22,7 @@ public class ProductService {
 //        return productRepository.findAll();
 //    }
 
+    @Cacheable("products")
     public List<ProductProjection> getAllProductsOptimized() {
         return productRepository.findAllProjected();
     }
